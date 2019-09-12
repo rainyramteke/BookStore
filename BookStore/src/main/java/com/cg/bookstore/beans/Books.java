@@ -1,5 +1,6 @@
 package com.cg.bookstore.beans;
 
+import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Entity;
@@ -24,7 +25,7 @@ public class Books {
 	private String title;
 	private String author;
 	private String isbn;
-	private String purchaseDate;
+	private Date purchaseDate;
 	private String bookImage;
 	private double price;
 	private String description;
@@ -71,11 +72,11 @@ public class Books {
 		this.isbn = isbn;
 	}
 
-	public String getPurchaseDate() {
+	public Date getPurchaseDate() {
 		return purchaseDate;
 	}
 
-	public void setPurchaseDate(String purchaseDate) {
+	public void setPurchaseDate(Date purchaseDate) {
 		this.purchaseDate = purchaseDate;
 	}
 

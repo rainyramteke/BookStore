@@ -1,9 +1,13 @@
 package com.cg.bookstore.beans;
 
+import java.util.Date;
+import java.util.List;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -18,9 +22,10 @@ public class Review {
 	private String bookTitle;
 	private double rating;
 	private String customerName;
-	private String headLine;
+	private String headline;
 	private String comments;
-	private String reviewDate;
+	private Date reviewDate;
+	
 
 	public int getId() {
 		return id;
@@ -54,12 +59,12 @@ public class Review {
 		this.customerName = customerName;
 	}
 
-	public String getHeadLine() {
-		return headLine;
+	public String getHeadline() {
+		return headline;
 	}
 
-	public void setHeadLine(String headLine) {
-		this.headLine = headLine;
+	public void setHeadline(String headline) {
+		this.headline = headline;
 	}
 
 	public String getComments() {
@@ -70,18 +75,18 @@ public class Review {
 		this.comments = comments;
 	}
 
-	public String getReviewDate() {
+	public Date getReviewDate() {
 		return reviewDate;
 	}
 
-	public void setReviewDate(String reviewDate) {
+	public void setReviewDate(Date reviewDate) {
 		this.reviewDate = reviewDate;
 	}
 
 	@Override
 	public String toString() {
 		return "Review [id=" + id + ", bookTitle=" + bookTitle + ", rating=" + rating + ", customerName=" + customerName
-				+ ", headLine=" + headLine + ", comments=" + comments + ", reviewDate=" + reviewDate + "]";
+				+ ", headline=" + headline + ", comments=" + comments + ", reviewDate=" + reviewDate + "]";
 	}
 
 }
