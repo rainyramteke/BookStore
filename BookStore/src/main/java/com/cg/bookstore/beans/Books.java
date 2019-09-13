@@ -3,6 +3,7 @@ package com.cg.bookstore.beans;
 import java.util.Date;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -24,8 +25,10 @@ public class Books {
 	private Category category;
 	private String title;
 	private String author;
+	@Column(unique = true)
 	private String isbn;
 	private Date purchaseDate;
+	private Date updateBookDate;
 	private String bookImage;
 	private double price;
 	private String description;
@@ -78,6 +81,14 @@ public class Books {
 
 	public void setPurchaseDate(Date purchaseDate) {
 		this.purchaseDate = purchaseDate;
+	}
+
+	public Date getUpdateBookDate() {
+		return updateBookDate;
+	}
+
+	public void setUpdateBookDate(Date updateBookDate) {
+		this.updateBookDate = updateBookDate;
 	}
 
 	public String getBookImage() {
